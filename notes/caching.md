@@ -79,16 +79,20 @@
 - data that does **NOT** change often
   - videos, images, text, API
 
-### Caching at various levels
+## Caching at various levels
 - DNS
 - API Server (in-memory) (on-disk: reduces network I/O)
 - Client side
 - Pre-computed (Materialized Table Views)
 - Load balancer
 - Centralized cache
-- Transperant cachec in front of DB (ex: CachOps)
+- Transperant cache in front of DB (ex: CachOps)
 - API Gateway cache
 
 </br> 
 
 - Read about ---- DB Buffer pool
+
+</br>  
+
+
