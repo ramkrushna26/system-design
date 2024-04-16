@@ -1,3 +1,5 @@
+# Scaling API/Application Servers
+
 **Number of requests system can handle simultaneously.** [adding resources to infrastructure]  
 
 </br> 
@@ -65,11 +67,35 @@ If you are building product from scratch then go with vertical scaling with some
 - When you horizontally scale your system, make sure your **database/cache support those many concurrent requests**
 - or any other shared resource that your application might be using (database/cache/elastice search/aws service) should support those many concurrent users
 
-## Scaling Databases
+</br>  
+
+# Scaling Databases Servers
+
+### Vertical Scaling
+- make machine bulkier  --->  increase RAM, CPU
+
+### Read Replicas
+- for every write request there will 99 requests means write:read ratio is (1:99)
+- Master takes all writes and propogate update to read replicas
+
+### Sharded/Distributed databases
+- Data will splitted and stored in different database (multiple masters)
+- All databases takes all type of workloads
+
+</br>  
+
+**Which strategy to choose?**  
+- do not over-provisioned  
+- do not over-optimize  
+
+</br>  
+
+**Do Sequencially**  
+- start by vertical scaling
+- then add read replicas
+- then shard the databases (dynamoDB, MongoDB - you get sharding by default)
+
+</br>  
 
 
-
-
-
-
-
+- 
