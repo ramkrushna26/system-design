@@ -48,6 +48,59 @@ Example:
 - Database redundancy (Standby, 1:1, N:N)
 - storage redundancy (RAID, geo redundancy, data centre redundancy)
 
+</br>
+
+## Relational Databases
+
+- Rows & columns
+- relations -- 1:1, 1:N, N:N
+- Normal Forms: 1NF, 2NF, 3NF and so on
+- contraints on columns or combination of columns (unique, not null, primary key, foreign key)
+- Trasaction: (ACID)
+    - Atomicity
+    - Consistency
+    - Isolation
+    - Durability
+
+</br>
+
+### Assignments
+- implement/simulate transaction isolation
+- implement transaction durability -- handle system failure
+- build trigger framework
+    - define trigger on data & conditions
+
+
+### Databased Indexes
+- improve lookups performance
+- decreases write performance
+- B+ tree data structure used for indexes
+- index is small table containing two columns 
+
+#### Types of Indexes
+- primary index : key + address of data
+- cluster index : key + data ---- order by key
+    - huge boost in perfromance
+    - reordering & updates are expensive
+- secondary index
+- composite index
+- partial index
+
+
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
