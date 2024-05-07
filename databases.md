@@ -51,7 +51,6 @@ Example:
 </br>
 
 ## Relational Databases
-
 - Rows & columns
 - relations -- 1:1, 1:N, N:N
 - Normal Forms: 1NF, 2NF, 3NF and so on
@@ -70,23 +69,27 @@ Example:
 - build trigger framework
     - define trigger on data & conditions
 
-
 ### Databased Indexes
 - improve lookups performance
 - decreases write performance
 - B+ tree data structure used for indexes
-- index is small table containing two columns 
+- index is small table containing two columns
 
 #### Types of Indexes
 - primary index : key + address of data
 - cluster index : key + data ---- order by key
     - huge boost in perfromance
-    - reordering & updates are expensive
+    - reordering & updates are expensive ----as every write has to synchronously update the indexes
 - secondary index
 - composite index
 - partial index
 
+</br>
 
+- you can specify which index you want to use while running a query -- certain DB provide such functionality
+
+-
+45min
 - 
 
 
