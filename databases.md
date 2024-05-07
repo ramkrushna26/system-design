@@ -88,9 +88,37 @@ Example:
 
 - you can specify which index you want to use while running a query -- certain DB provide such functionality
 
--
-45min
-- 
+## Database Locking
+
+### Read lock/Shared lock
+- records are reserved for read by current session
+- other session can read the locked data
+- other session can NOT update/write locked data
+
+### Write lock/Exclusive lock
+- records are reserved for write by current session
+- other session can NOT read/write the data
+
+</br>
+
+- **lock granularity**: table, rows, columns
+- page level locking
+
+</br>
+
+- if engine detects deadlock then it kills the session/transaction running which the deadlock was detected
+
+</br>
+
+- database meant handle locking and ensure persistant data, so don't handle locking on application side, it will make things slow
+
+```
+AUTOCOMMIT OFF;
+
+SELECT *** FOR SHARE; #To get the shared/read lock
+
+SELECT *** FOR UPDATE; #To get the write/update lock
+```
 
 
 
