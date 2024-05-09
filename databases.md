@@ -120,9 +120,21 @@ SELECT *** FOR SHARE; #To get the shared/read lock
 SELECT *** FOR UPDATE; #To get the write/update lock
 ```
 
+</br>
 
+Skip rows if they are locked:
+- If a row is locked by transaction then other transaction requesting same rows must wait until the lock is release.
+- **NOWAIT**: query executed and failed if rows are locked
+```
+SELECT * FROM TAB WHERE ROW = 3 UPDATE NOWAIT;
+```
 
+- **SKIP LOCKED**: removes locked rows from result set
+```
+SELECT * FROM TAB WHERE ROW = 3 UPDATE SKIP LOCKED;
+```
 
+## 
 
 
 
